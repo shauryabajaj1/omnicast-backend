@@ -412,7 +412,7 @@ def send_bulk_messages(request):
                 client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
                 client.messages.create(
                     body=message,
-                    from_=settings.TWILIO_PHONE_NUMBER,
+                    from_="+12209006566",
                     to=phone,
                 )
                 results.append({"status": "sent", "channel": "sms", "to": phone})
@@ -444,7 +444,7 @@ def send_bulk_messages(request):
                 client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
                 call = client.calls.create(
                     to=phone,
-                    from_=settings.TWILIO_PHONE_NUMBER,
+                    from_="+12209006566",
                     twiml=f'<Response><Say>{call_message}</Say></Response>'
                 )
                 results.append({"status": "call initiated", "channel": "call", "to": phone, "sid": call.sid})
