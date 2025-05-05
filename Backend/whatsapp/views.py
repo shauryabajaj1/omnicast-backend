@@ -40,7 +40,6 @@ import imaplib
 import email
 from email.header import decode_header
 from email.utils import parseaddr
-
 whatsapp_messages = []
 
 
