@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-iebfvuigz-%#j%&$1%8nytvfz)=806-*3d6hjs@hoi12rm==46
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dcda-2405-201-4007-10e6-8051-8773-a7c0-edd1.ngrok-free.app', '127.0.0.1', 'localhost', 'bf68-2405-201-4007-10e6-5184-3547-6994-c83f.ngrok-free.app', '25bf-2405-201-4007-10e6-d866-7f6a-2b8e-d7b8.ngrok-free.app']
+ALLOWED_HOSTS = ['dcda-2405-201-4007-10e6-8051-8773-a7c0-edd1.ngrok-free.app', '127.0.0.1', 'localhost', 'bf68-2405-201-4007-10e6-5184-3547-6994-c83f.ngrok-free.app', '25bf-2405-201-4007-10e6-d866-7f6a-2b8e-d7b8.ngrok-free.app', 'omnicast-backend.onrender.com']
 
 
 # Application definition
