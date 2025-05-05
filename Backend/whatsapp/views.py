@@ -374,11 +374,22 @@ def send_bulk_messages(request):
         return JsonResponse({"error": "Missing channel, message, or recipients"}, status=400)
 
     # Retrieve the stored email credentials from the session
-    user_email = request.session.get('email')
-    user_app_password = request.session.get('app_password')
+    data = json.loads(request.body)
+    user_email = data.get("user_email")
 
-    if not user_email or not user_app_password:
-        return JsonResponse({"error": "User email or app password not found in session"}, status=400)
+    try:
+        user = User.objects.get(email=user_email)
+        profile = UserProfile.objects.get(user=user)
+        user_email = profile.email_host_user
+        user_app_password = profile.email_host_password
+
+        if not user_email or not user_app_password:
+            return JsonResponse({"error": "User email or app password not set in profile"}, status=400)
+
+    except User.DoesNotExist:
+        return JsonResponse({"error": "User not found"}, status=404)
+    except UserProfile.DoesNotExist:
+        return JsonResponse({"error": "User profile not found"}, status=404)
 
     results = []
 
