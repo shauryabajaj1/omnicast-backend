@@ -1,0 +1,38 @@
+Omnicast Backend
+The backend system for Omnicast, a customer communication and analytics platform designed for businesses to manage client outreach across multiple channels built for IN3TECH. This backend enables businesses to send and track messages via WhatsApp, SMS, email, and calls, while also providing tools for lead management, client interest analytics, and reply tracking.
+
+Features
+1. Multi-Channel Messaging
+WhatsApp, SMS, Email, and Voice Call support via integrated APIs (e.g., Twilio, SMTP).
+
+Bulk messaging support for campaigns and lead engagement.
+
+Smart fallbacks and error handling for message delivery issues.
+
+2. Inbound Message Tracking
+Automatically reads and parses replies to emails and WhatsApp/SMS messages.
+
+Links replies back to the original leads or campaigns.
+
+3. Lead and Interest Analytics
+Upload lead lists via CSV.
+
+Assign interest levels, status, and metadata to leads.
+
+Real-time tracking of message opens, replies, and clicks (where supported).
+
+4. Admin Tools & Dashboard APIs
+APIs to filter/sort leads by tags, status, or engagement.
+
+Generate summary analytics for outreach performance (e.g., reply rates).
+
+Export filtered lead data and campaign results.
+
+Tech Stack
+Backend Framework: Django (Python)
+
+Database: PostgreSQL (multi-tenant setup)
+
+Messaging APIs: Twilio (for WhatsApp, SMS, Voice), SMTP/SendGrid (for Email)
+
+Authentication: Token-based (JWT or Django Auth)
